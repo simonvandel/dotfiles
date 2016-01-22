@@ -30,6 +30,10 @@
       options = "defaults,windows_names";
     };
 
+  fileSystems."/boot" = {
+      device = "/dev/sdb2";
+  };
+
   swapDevices = [ { device = "/dev/disk/by-uuid/fa000d98-6212-414a-af29-dd93cc9485d0"; } ];
 
   nix.maxJobs = 4;

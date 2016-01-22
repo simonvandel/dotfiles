@@ -15,9 +15,5 @@
   boot.loader.gummiboot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  fileSystems."/boot" = {
-    device = "/dev/sdb2";
-  };
-
   networking.hostName = "vandel-beast"; # Define your hostname.
 }
