@@ -11,9 +11,16 @@
       /etc/nixos/hardware-configuration.nix
     ];
 
-  # Use the gummiboot efi boot loader.
-  boot.loader.gummiboot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot = {
+    loader = {
+      gummiboot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+    extraModprobeConfig = ''
+      options snd_hda_intel index=0 model=intel-mac-auto id=PCH
+      options snd_hda_intel index=1 model=intel-mac-auto id=HDMI
+     '';
+  };
 
   networking.hostName = "vandel-macair";
 
