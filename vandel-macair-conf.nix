@@ -31,7 +31,7 @@
     # disable XHC1 acpi to avoid resume directly after suspend
     udev.extraRules = ''SUBSYSTEM=="pci", KERNEL=="0000:00:14.0", ATTR{power/wakeup}="disabled"'';
 
-    #mba6x_bl.enable = true; # gives black screen on boot right now
+    mba6x_bl.enable = true; # gives black screen on boot right now
 
     # power savings
     upower.enable = true;
