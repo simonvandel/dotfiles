@@ -101,16 +101,19 @@
   environment.gnome3.excludePackages = with pkgs.gnome3; [ empathy epiphany evolution totem vino yelp accerciser ];
 
   # User configuration
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.extraUsers.simon = {
-    isNormalUser = true;
-    uid = 1000;
-    extraGroups = [ "sudo" ];
-    description = "Simon Vandel Sillesen";
+  users = {
+    # Define a user account. Don't forget to set a password with ‘passwd’.
+    extraUsers.simon = {
+      isNormalUser = true;
+      uid = 1000;
+      extraGroups = [ "sudo" ];
+      description = "Simon Vandel Sillesen";
+    };
+
+    extraGroups.sudo = {};
   };
 
   security.sudo.extraConfig = "%sudo ALL=(ALL:ALL) ALL"; # users in the group sudo can use sudo
-  users.extraGroups.sudo = {};
 
   # Shell
   programs.bash.enableCompletion = true;
