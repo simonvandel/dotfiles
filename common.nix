@@ -21,9 +21,7 @@
     aspellDicts.en
     biber
     google-chrome
-    haskellPackages.cabal-install
-    haskellPackages.stylish-haskell
-    haskellPackages.hlint
+    myHaskellEnv
     cabal2nix
     #dropbox
     elementary-icon-theme
@@ -35,8 +33,6 @@
     git
     goldendict
     gparted
-    haskellPackages.ghc
-    haskellPackages.ghc-mod
     keepassx2
     hexchat
     kodi
@@ -75,6 +71,17 @@
 
     kodi = {
       enablePVRHTS = true;
+    };
+
+    packageOverrides = super: let self = super.pkgs; in
+    {
+      myHaskellEnv = self.haskellPackages.ghcWithHoogle
+                       (haskellPackages: with haskellPackages; [
+                         # libraries
+                         word8 classy-prelude base64-bytestring base16-bytestring
+                         # tools
+                         cabal-install stylish-haskell ghc-mod hlint hasktags
+                       ]);
     };
   };
 
