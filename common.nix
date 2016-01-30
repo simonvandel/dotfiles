@@ -45,6 +45,7 @@
     paper-gtk-theme
     openssh
     qbittorrent
+    silver-searcher
     skype
     spotify
     theme-vertex
