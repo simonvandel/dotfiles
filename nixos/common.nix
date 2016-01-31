@@ -31,6 +31,7 @@
     gcc
     gdb
     git
+    gnupg
     goldendict
     gparted
     keepassx2
@@ -81,9 +82,10 @@
                          # libraries
                          word8 classy-prelude base64-bytestring base16-bytestring
                          # tools
-                         cabal-install stylish-haskell ghc-mod hlint hasktags
+                         cabal-install stylish-haskell ghc-mod hlint hasktags super-user-spark
                        ]);
     };
+      gnupg = pkgs.gnupg21;
   };
 
   # misc

@@ -1,8 +1,9 @@
-# Installing #
+# Deployment #
 
-In the below snippet, replace the path to home and the machine (here vandel-beast) as needed.
 ``` bash
-sudo ln -s /home/simon/nixos-config/common.nix /etc/nixos/common.nix
-sudo ln -s /home/simon/nixos-config/vandel-beast-conf.nix /etc/nixos/configuration.nix
-sudo ln -s /home/simon/nixos-config/vandel-beast-hardware-conf.nix /etc/nixos/hardware-configuration.nix
+spark deploy spark.sus
 ```
+Notes: 
+* super-user-spark must be installed
+* May need to be run be root to deploy nixos files
+* HOST enviroment variable must be exported

@@ -1,0 +1,16 @@
+card sus {
+  spark card nixos
+}
+
+card nixos {
+  into /etc/nixos/
+  outof nixos
+
+  common.nix
+  {
+    outof $(HOST)
+
+    configuration.nix
+    hardware-configuration.nix
+  }
+}
