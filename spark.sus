@@ -1,5 +1,6 @@
 card sus {
   spark card nixos
+  spark card spacemacs
 }
 
 card nixos {
@@ -13,4 +14,10 @@ card nixos {
     configuration.nix
     hardware-configuration.nix
   }
+}
+
+card spacemacs {
+  into ~
+
+  .spacemacs
 }
