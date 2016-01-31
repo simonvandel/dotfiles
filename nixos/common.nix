@@ -48,6 +48,7 @@
     qbittorrent
     silver-searcher
     skype
+    source-code-pro
     spotify
     theme-vertex
     thunderbird
