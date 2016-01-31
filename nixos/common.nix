@@ -145,11 +145,10 @@
 
   systemd.user.services.emacs = {
    enable = true;
-   description = "Emacs daemon ny";
+   description = "Emacs daemon";
    environment.PATH = "/run/current-system/sw";
-   environment.HEST = "hest";
    environment.GTK_DATA_PREFIX = config.system.path;
-   environment.SSH_AUTH_SOCK = "%t/ssh-agent";
+   environment.SSH_AUTH_SOCK = "%t/keyring/ssh";
    environment.GTK_PATH = "${config.system.path}/lib/gtk-3.0:${config.system.path}/lib/gtk-2.0";
    serviceConfig = {
      Type = "forking";
