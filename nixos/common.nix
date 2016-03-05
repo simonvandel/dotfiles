@@ -87,11 +87,11 @@
                          # tools
                          cabal-install stylish-haskell ghc-mod hlint hasktags super-user-spark
                        ]);
+      gnupg = super.gnupg21;
       firefox-unwrapped = super.firefox-unwrapped.override {
         enableGTK3 = true;
       };
     };
-      gnupg = pkgs.gnupg21;
   };
 
   # misc
