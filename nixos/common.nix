@@ -54,7 +54,6 @@
     spotify
     theme-vertex
     thunderbird
-    teamviewer
     (texlive.combine {
       inherit (texlive) epigraph soul bezos fmtcount datetime marginnote pdfcomment pgf-umlcd logreq biblatex-ieee nopageno pgfplots siunitx semantic braket was fixme biblatex csquotes lastpage cleveref titlesec scheme-medium algorithms algorithmicx enumitem collectbox adjustbox latexmk fourier;
     })
@@ -93,7 +92,6 @@
 
   # misc
   programs.ssh.startAgent = false;
-  services.teamviewer.enable = true;
   services.xserver.startGnuPGAgent = true;
   hardware.pulseaudio.enable = true;
 
