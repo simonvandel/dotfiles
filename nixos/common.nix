@@ -37,6 +37,7 @@
     gparted
     keepassx2
     hexchat
+    idea.idea-ultimate
     kodi
     meld
     mpv
