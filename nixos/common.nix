@@ -68,7 +68,8 @@
     allowUnfree = true;
 
     firefox = {
-    enableAdobeFlash = true;
+      enableAdobeFlash = true;
+      enableGTK3 = true;
     };
 
     allowBroken = false;
@@ -86,6 +87,9 @@
                          # tools
                          cabal-install stylish-haskell ghc-mod hlint hasktags super-user-spark
                        ]);
+      firefox-unwrapped = super.firefox-unwrapped.override {
+        enableGTK3 = true;
+      };
     };
       gnupg = pkgs.gnupg21;
   };
