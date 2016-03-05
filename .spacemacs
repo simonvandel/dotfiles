@@ -20,6 +20,7 @@
      (auto-completion :variables
                       auto-completion-enable-snippets-in-popup t
                       auto-completion-enable-help-tooltip t)
+     c-c++
      emacs-lisp
      git
      github
