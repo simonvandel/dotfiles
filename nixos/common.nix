@@ -96,8 +96,8 @@
 
   # misc
   programs.ssh.startAgent = false;
-  services.xserver.startGnuPGAgent = true;
   hardware.pulseaudio.enable = true;
+  virtualisation.docker.enable = true;
 
   # GUI
   services.xserver.enable = true;
