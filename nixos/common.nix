@@ -104,7 +104,7 @@
     extraUsers.simon = {
       isNormalUser = true;
       uid = 1000;
-      extraGroups = [ "sudo" ];
+      extraGroups = [ "sudo" "docker" ];
       description = "Simon Vandel Sillesen";
     };
 
