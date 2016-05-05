@@ -28,7 +28,6 @@
     elementary-icon-theme
     emacs
     file
-    firefoxWrapper
     gcc
     gdb
     git
@@ -67,11 +66,6 @@
   nixpkgs.config = {
     allowUnfree = true;
 
-    firefox = {
-      enableAdobeFlash = true;
-      enableGTK3 = true;
-    };
-
     allowBroken = false;
 
     kodi = {
@@ -88,9 +82,6 @@
                          cabal-install stylish-haskell ghc-mod hlint hasktags super-user-spark
                        ]);
       gnupg = super.gnupg21;
-      firefox-unwrapped = super.firefox-unwrapped.override {
-        enableGTK3 = true;
-      };
     };
   };
 
