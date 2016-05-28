@@ -15,19 +15,19 @@
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/37fda4d0-a460-4d69-931d-055a3d726802";
       fsType = "btrfs";
-      options = "compress=lzo,discard,defaults,ssd";
+      options = ["compress=lzo" "discard" "defaults" "ssd"];
     };
 
   fileSystems."/mnt/windows/" =
     { device = "/dev/disk/by-uuid/766658266657E601";
       fsType = "ntfs";
-      options = "defaults,windows_names";
+      options = ["defaults" "windows_names"];
     };
 
   fileSystems."/mnt/windowsData/" =
     { device = "/dev/disk/by-uuid/567404EE7404D2A3";
       fsType = "ntfs";
-      options = "defaults,windows_names";
+      options = ["defaults" "windows_names"];
     };
 
   fileSystems."/boot" = {
