@@ -38,6 +38,9 @@ in
       Type = "oneshot";
     };
   };
+  hardware = {
+    facetimehd.enable = true;
+  };
 
   services = {
     # disable XHC1 acpi to avoid resume directly after suspend
