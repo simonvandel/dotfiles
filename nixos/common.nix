@@ -40,7 +40,6 @@
     kodi
     meld
     mpv
-    mumble
     nix-repl
     nox
     numix-icon-theme
