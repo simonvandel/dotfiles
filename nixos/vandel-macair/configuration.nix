@@ -51,6 +51,7 @@ in
     tlp.enable = true;
 
     xserver = {
+      vaapiDrivers = [ pkgs.vaapiIntel pkgs.vaapiVdpau ];
       # keyboard settings
       xkbOptions = "ctrl:nocaps"; # make capslock = ctrl
 
