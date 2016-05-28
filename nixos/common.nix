@@ -79,7 +79,8 @@
                          # libraries
                          word8 classy-prelude base64-bytestring base16-bytestring
                          # tools
-                         cabal-install stylish-haskell ghc-mod hlint hasktags super-user-spark
+                         stack cabal-install stylish-haskell ghc-mod hlint hasktags
+                         # fails compiling super-user-spark
                        ]);
       gnupg = super.gnupg21;
     };
