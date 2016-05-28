@@ -29,11 +29,8 @@
     emacs
     file
     gcc
-    gdb
     git
     gnupg
-    goldendict
-    gparted
     keepassx2
     idea.idea-ultimate
     kodi
