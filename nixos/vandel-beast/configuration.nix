@@ -16,4 +16,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "vandel-beast"; # Define your hostname.
+
+  services.xserver.vaapiDrivers = [ pkgs.vaapiVdpau ];
 }
