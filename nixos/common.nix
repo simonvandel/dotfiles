@@ -18,8 +18,6 @@
   environment.systemPackages = with pkgs; [
     atom
     arc-gtk-theme
-    aspell
-    aspellDicts.en
     biber
     google-chrome
     myHaskellEnv
