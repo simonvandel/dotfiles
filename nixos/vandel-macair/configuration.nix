@@ -61,6 +61,10 @@ in
         minSpeed = "0.5";
         maxSpeed = "1";
         tapButtons = true;
+        additionalOptions = ''
+          Option "TapButton1" "1"
+          Option "TapButton2" "3"
+        '';
       };
     };
   };
