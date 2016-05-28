@@ -4,6 +4,8 @@
 
 { config, pkgs, ... }:
 
+let modprobe = "${config.system.sbin.modprobe}/sbin/modprobe";
+in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -27,11 +29,19 @@
 
   networking.hostName = "vandel-macair";
 
+  boot.extraModulePackages = [ config.boot.kernelPackages.mba6x_bl ];
+  systemd.services.mba6x_blWorkaround = {
+    description = "Remove and reload mba6x to workaround no brightness bug (https://github.com/patjak/mba6x_bl/issues/43)";
+    wantedBy = [ "multi-user.target" ];
+    script = "${modprobe} -r mba6x_bl && ${modprobe} mba6x_bl";
+    serviceConfig = {
+      Type = "oneshot";
+    };
+  };
+
   services = {
     # disable XHC1 acpi to avoid resume directly after suspend
     udev.extraRules = ''SUBSYSTEM=="pci", KERNEL=="0000:00:14.0", ATTR{power/wakeup}="disabled"'';
-
-    mba6x_bl.enable = true; # gives black screen on boot right now
 
     # power savings
     upower.enable = true;
