@@ -35,13 +35,11 @@
     goldendict
     gparted
     keepassx2
-    hexchat
     idea.idea-ultimate
     kodi
     meld
     mpv
     nix-repl
-    nox
     numix-icon-theme
     paper-gtk-theme
     openssh
